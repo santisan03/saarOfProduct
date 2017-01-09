@@ -4,13 +4,15 @@ public class User {
 	private static int idStaticUser = 0;
 	private int idUser;
 	private String usuario;
+	private String contraseña;
 	private String nombre;
 	private String apellido;
 
-	public User (String usuario, String nombre, String apellido) {
-		this.setUsuario(usuario);
-		this.setNombre(nombre);
-		this.setApellido(apellido);
+	public User (String usuario, String contraseña, String nombre, String apellido) {
+		this.usuario = usuario;
+		this.contraseña = contraseña;
+		this.nombre = nombre;
+		this.apellido = apellido;
 		this.idUser = generarIdUser();
 	}
 	
@@ -45,6 +47,14 @@ public class User {
 
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
+	}
+
+	public String getContraseña() {
+		return contraseña;
+	}
+
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
 	}
 
 }
